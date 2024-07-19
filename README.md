@@ -9,14 +9,14 @@ You can install the SDK via Composer. Add the following to your `composer.json` 
 ```json
 {
     "require": {
-        "heytextual/heytextual-php": "^1.0"
+        "heytextual/heytextual": "^1.0"
     }
 }
 ```
 
 Or run the following command:
 ```bash
-composer require heytextual/heytextual-php
+composer require heytextual/heytextual
 
 ```
 
