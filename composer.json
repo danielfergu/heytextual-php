@@ -2,6 +2,9 @@
     "name": "heytextual/heytextual",
     "description": "PHP SDK for the HeyTextual API",
     "type": "library",
+    "keywords": ["HeyTextual","API"],
+    "homepage": "https://github.com/danielfergu/heytextual-php",
+    "license": "MIT",
     "require": {
         "php": ">=7.2",
         "guzzlehttp/guzzle": "^7.0"
