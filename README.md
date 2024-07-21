@@ -1,10 +1,10 @@
 # HeyTextual PHP SDK
 
-A PHP SDK for interacting with the HeyTextual API. This SDK provides a simple and convenient way to work with the HeyTextual API endpoints.
+Este SDK proporciona una forma simple de interactuar con la API de HeyTextual.
 
-## Installation
+## Instalación
 
-You can install the SDK via Composer. Add the following to your `composer.json` file:
+Puedes instalar el SDK a través de Composer. Añade lo siguiente a tu archivo `composer.json`:
 
 ```json
 {
@@ -14,34 +14,40 @@ You can install the SDK via Composer. Add the following to your `composer.json` 
 }
 ```
 
-Or run the following command:
+O ejecuta el siguiente comando:
 ```bash
 composer require heytextual/heytextual
 
 ```
 
-## Usage
-First, include the Composer autoload file in your project:
+## Uso
+Primero, incluye el archivo de autoload de Composer en tu proyecto:
 ```php
+<?php
+
 require 'vendor/autoload.php';
 
 ```
 
-Then, use the Heytextual\Client class to interact with the API:
+Luego, usa la clase Heytextual\Client para interactuar con la API:
 ```php
 use Heytextual\Client;
 
 $client = new Client('your_api_key_here');
 
-// Extract data from a file
-$data = $client->extract('/path/to/file.pdf', 'TEMPLATEID');
+// Extrae los datos de un archivo
+$data = $client->extract('/ruta/al/archivo.pdf', 'AUTO');
+print_r($data);
 
-// Fetch documents with optional parameters
+// Obtén los documentos
 $documents = $client->documents(['startDate' => '2022-01-01', 'endDate' => '2022-12-31', 'last' => 10]);
+print_r($documents);
 
-// Fetch a single document by ID
+// Obtén los resultados de un documento
 $document = $client->document('DOCUMENTID');
+print_r($document);
 
-// Fetch templates with optional parameters
+// Obtén las plantillas
 $templates = $client->templates(['startDate' => '2022-01-01', 'endDate' => '2022-12-31', 'last' => 10]);
+print_r($templates);
 ```
