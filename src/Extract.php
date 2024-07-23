@@ -18,7 +18,7 @@ class Extract
         $response = $this->client->request('POST', '/extract', [
             'multipart' => [
                 [
-                    'name'     => 'archivo',
+                    'name'     => 'file',
                     'contents' => fopen($filePath, 'r')
                 ],
                 [
